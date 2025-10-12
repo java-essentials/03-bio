@@ -5,6 +5,7 @@ import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
 
 import java.io.*;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,7 +41,7 @@ class BioTaskTest {
         System.setIn(in);
 
         // Проверяем, что выбрасывается NumberFormatException
-        assertThrows(NumberFormatException.class, () -> BioTask.main(new String[]{}));
+        assertThrows(InputMismatchException.class, () -> BioTask.main(new String[]{}));
     }
 
     @Test
